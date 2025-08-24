@@ -5,12 +5,6 @@ buildscript {
         hilt_version = '2.44'
     }
     
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
-    
     dependencies {
         classpath 'com.android.tools.build:gradle:8.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -18,13 +12,6 @@ buildscript {
         classpath 'org.jlleitschuh.gradle:ktlint-gradle:11.6.1'
         classpath 'io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.23.1'
         classpath 'org.owasp:dependency-check-gradle:8.4.0'
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
     }
 }
 
