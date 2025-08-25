@@ -19,6 +19,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+        
     - name: Cache Gradle packages
       uses: actions/cache@v4
       with:
@@ -31,6 +34,9 @@ jobs:
           
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Validate Gradle wrapper
+      uses: gradle/wrapper-validation-action@v1
       
     - name: Run ktlint
       run: ./gradlew ktlintCheck
@@ -49,6 +55,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+        
     - name: Cache Gradle packages
       uses: actions/cache@v4
       with:
@@ -61,6 +70,9 @@ jobs:
           
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Validate Gradle wrapper
+      uses: gradle/wrapper-validation-action@v1
       
     - name: Run detekt
       run: ./gradlew detekt
@@ -86,6 +98,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+        
     - name: Cache Gradle packages
       uses: actions/cache@v4
       with:
@@ -98,6 +113,9 @@ jobs:
           
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+    - name: Validate Gradle wrapper
+      uses: gradle/wrapper-validation-action@v1
       
     - name: Run dependency vulnerability check
       run: ./gradlew dependencyCheckAnalyze || echo "Dependency check completed with warnings"
