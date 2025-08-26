@@ -91,11 +91,25 @@ app/src/main/java/com/dailynotes/
 
 📖 详细说明请参考 → [个人使用构建指南](PERSONAL_BUILD_GUIDE.md)
 
-### 🏢 开发环境
-- Android Studio Flamingo | 2022.2.1+
-- Kotlin 1.8.10+  
-- Android SDK 34
-- 最低支持 Android 7.0 (API 24)
+### 🏢 开发环境要求
+
+#### 必需环境
+- **JDK**: OpenJDK 17 (推荐 Temurin 发行版)
+- **Android SDK**: 34 (compileSdk)
+- **Build Tools**: 34.0.0+
+- **Kotlin**: 1.8.10
+- **Gradle**: 8.2+ (通过 Gradle Wrapper)
+
+#### 开发工具
+- **Android Studio**: Flamingo | 2022.2.1+ 
+- **最低支持**: Android 7.0 (API 24)
+- **目标版本**: Android 14 (API 34)
+
+#### CI/CD 环境 (GitHub Actions)
+- **运行系统**: ubuntu-latest
+- **JDK版本**: 17 (Temurin)
+- **Android SDK**: 自动配置 (android-actions/setup-android@v3)
+- **缓存**: Gradle dependencies 自动缓存
 
 ### 权限说明
 应用需要以下权限：
