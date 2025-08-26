@@ -25,6 +25,11 @@ jobs:
         
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
+      
+    - name: Create local.properties
+      run: |
+        echo "sdk.dir=$ANDROID_HOME" > local.properties
+        cat local.properties
         
     - name: Cache Gradle packages
       uses: actions/cache@v4
